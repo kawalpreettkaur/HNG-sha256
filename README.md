@@ -1,7 +1,7 @@
 # HNG-sha256 
 ## Generates sha256 of json files
 
-# Algorithm that has been used to implement sha256 generator:
+## Algorithm that has been used to implement sha256 generator:
 
 1. ###  Input CSV file
 2. ###  Generate a JSON file per entry in team's sheet in CHIP-0007's default format
