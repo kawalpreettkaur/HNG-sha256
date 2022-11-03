@@ -19,9 +19,15 @@ def main():
 
 def defaultJson(f):
     global C
+    
+    try:
+        os.makedirs("Json Files", exist_ok = True)
+     except OSError as error:
+        print("New Directory '%s' can not be created. Already exists!")
+        exit(0)
 
     with open(f, 'r') as file:
-        os.mkdir("Json Files")
+        
         FNAME.append(Path(f).stem)
 
         csvreader = csv.reader(file)
