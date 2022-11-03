@@ -3,7 +3,7 @@
 
 # Algorithm that has been used to implement sha256 generator:
 
-TODO 1 : ###  Input CSV file
+1. ###  Input CSV file
 TODO 2 : ###  Generate a JSON file per entry in team's sheet in CHIP-0007's default format
 
 ### Below mentioned default CHIP-0007 format of json file has been used:
