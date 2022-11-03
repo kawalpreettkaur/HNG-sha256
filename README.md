@@ -10,11 +10,11 @@
 
 ### Sample 1
 
-![image](https://github.com/kawalpreettkaur/HNG-sha256/blob/main/Sample%20CLI%20Executions/sample_run1.PNG")
+![image](https://raw.githubusercontent.com/kawalpreettkaur/HNG-sha256/main/Sample%20CLI%20Executions/sample_run1.PNG)
 
 ### Sample 2
 
-< img src = "https://github.com/kawalpreettkaur/HNG-sha256/blob/main/Sample%20CLI%20Executions/sample_run2.PNG"/>
+![image](https://raw.githubusercontent.com/kawalpreettkaur/HNG-sha256/main/Sample%20CLI%20Executions/sample_run2.PNG)
 
 # How to use this script?
 
