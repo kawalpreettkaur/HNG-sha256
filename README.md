@@ -3,11 +3,11 @@
 
 # Algorithm that has been used to implement sha256 generator:
 
-### TODO 1 : Input CSV file
-### TODO 2 : Generate a JSON file per entry in team's sheet in CHIP-0007's default format
+TODO 1 : ###  Input CSV file
+TODO 2 : ###  Generate a JSON file per entry in team's sheet in CHIP-0007's default format
 
 ### Below mentioned default CHIP-0007 format of json file has been used:
-
+```sh
 json_data =
 {
     "format": "CHIP-0007",
@@ -26,11 +26,12 @@ json_data =
         "id": "ID of the NFT collection - e43fcfe6-1d5c-4d6e-82da-5de3aa8b3b57"
     }
 }
+```
 
-### TODO 3 : Calculate sha256 of the each entry
-### TODO 4 : Append it to csv file including new row named sha256
+TODO 3 : ### Calculate sha256 of the each entry
+TODO 4 : ### Append it to csv file including new row named sha256
 
-
+## Getting started
 
 # Prerequisite : 
 1. Python Enviornment
@@ -69,17 +70,17 @@ json_data =
 
 # How to use this script to avoid common errors?
 
-### TODO 1 : Save main.py file where your NFT Namings file(CSV file) is present
-### TODO 2 : Open Command Prompt and change your present directory ( where TODO 1 is present)
-### TODO 3 : Before running the script please ensure you follow these guidelines:-
+TODO 1 : ###  Save main.py file where your NFT Namings file(CSV file) is present
+TODO 2 : ###  Open Command Prompt and change your present directory ( where TODO 1 is present)
+TODO 3 : ###  Before running the script please ensure you follow these guidelines:-
 ####           - Make sure including "csv file only" while running the script.
 ####           - CSV file must include Headers in this order : Series Number,Filename,Description,Gender
 ####           - Make sure your NFT file name doesn't include any spaces. If there is space, please replace it with an underscore. 
 ####                Example: NFT Namings.csv is incorrect.
 ####                         Rename and replace the space with an underscore. Now, it becomes NFT_NAMINGS.csv
 #### 
-### TODO 4 : Run this -> python main.py NFT_Namings.csv
-### TODO 5 : Viola, CSV file including sha256 has been created!
+TODO 4 : ### Run this -> python main.py NFT_Namings.csv
+TODO 5 : ### Viola, CSV file including sha256 has been created!
 
 
 
