@@ -10,7 +10,7 @@
 
 ### Sample 1
 
-< img src="https://github.com/kawalpreettkaur/HNG-sha256/blob/main/Sample%20CLI%20Executions/sample_run1.PNG" />
+![image](https://github.com/kawalpreettkaur/HNG-sha256/blob/main/Sample%20CLI%20Executions/sample_run1.PNG")
 
 ### Sample 2
 
