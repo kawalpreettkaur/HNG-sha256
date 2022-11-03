@@ -8,7 +8,7 @@
 
 # How to use this script?
 
-### TODO 1 : Save this file where your NFT Namings file(CSV file) is present
+### TODO 1 : Save main.py file where your NFT Namings file(CSV file) is present
 ### TODO 2 : Open Command Prompt and change your present directory ( where TODO 1 is present)
 ### TODO 3 : Before running the script please ensure you follow these guidelines:-
 ####           - Make sure to include "csv file only" while running the script.
