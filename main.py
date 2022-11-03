@@ -4,14 +4,22 @@ import sys
 import hashlib
 import json
 from pathlib import Path
+
 FNAME = []
 C = 0
+NEW =[]
 
 
 def main():
-    print("\nCreating json files...")
-    fname = sys.argv[1]
+    try:
+        fname = sys.argv[1]
+    except IndexError:
+        print("Wrong command input!")
+        exit(1)
+    
+    # Proceeds to default json generation
     defaultJson(fname)
+
 
 
 # TODO 1 : Input CSV file
@@ -19,15 +27,17 @@ def main():
 
 def defaultJson(f):
     global C
-    
-    try:
-        os.makedirs("Json Files", exist_ok = True)
-    except OSError as error:
-        print("New Directory '%s' can not be created. Already exists!")
-        exit(0)
 
     with open(f, 'r') as file:
+        try:
+            os.makedirs("Json_Files", exist_ok = True)
+        except OSError as error:
+            print("New Directory can not be created. Already exists!")
+            exit(0)
         
+        print("\nCreating json files...")
+        
+        # gets the filename would help in output file name generation
         FNAME.append(Path(f).stem)
 
         csvreader = csv.reader(file)
@@ -35,11 +45,23 @@ def defaultJson(f):
         for row in csvreader:
             temp = row
 
-            if row[0] == 'Series Number' or row[0] == '':
+            if row[0] == 'Series Number':
+                temp.append("sha256")
+                NEW.append(temp)
                 continue
+            elif row[0].strip() == '':
+                
+                # when row is empty
+                
+                print(f"\n= {C} json file(s) created.\nCheck them all in your Current working directory, folder named - Json Files")
+                print(f"\n- sha256 added to the copy of a csv file. Check the file in your current working directory.")
+                outputFile(NEW)
+                exit(1)
+
             else:
 
                 # TODO 2 : Generate a JSON file per entry in team's sheet in CHIP-0007's default format
+                
                 new_jsonFile = f"{row[1]}.json"
                 json_data = {}
 
@@ -59,31 +81,36 @@ def defaultJson(f):
 
                 json_data["collection"] = collection_data
 
-                filepath = f"Json Files/{new_jsonFile}"
+                filepath = f"Json_Files/{new_jsonFile}"
+                
                 with open(filepath, 'w') as f:
                     json.dump(json_data, f, indent=2)
                     C += 1
                     sha256_hash = sha256_gen(filepath)
                     temp.append(sha256_hash)
-                    outputFile(temp)
 
-        print(f"\n= {C} json file(s) created.\nCheck them all in your Current working directory, folder named - Json Files")
-        print(f"\n- sha256 added to the copy of a csv file. Check the file in your current working directory.")
+                    NEW.append(temp)
 
 
 # TODO 3 : Calculate sha256 of the each entry
-def sha256_gen(filename):
-    return hashlib.sha256(open(filename, 'rb').read()).hexdigest()
+def sha256_gen(fn):
+    
+    return hashlib.sha256(open(fn, 'rb').read()).hexdigest()
 
 
-# TODO 4 : Append it to csv file including new row named sha256
+# TODO 4 : Append it to csv file including new column named sha256
 
 def outputFile(t_list):
-    output = f"{FNAME[0]}.output.csv"
+    output = f"{FNAME[0]}output.csv"
 
     with open(output, 'a') as outputfile:
-           writer = csv.writer(outputfile)
-           writer.writerow(t_list)
+            
+
+        writer = csv.writer(outputfile)
+        for lis in NEW:
+            writer.writerow(lis)
+
+
 
 if __name__ == main():
     main()
