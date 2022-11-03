@@ -6,6 +6,16 @@
 1. Python Enviornment
 2. CLI
 
+# Sample Code Executions
+
+### Sample 1
+
+< img src="https://github.com/kawalpreettkaur/HNG-sha256/blob/main/Sample%20CLI%20Executions/sample_run1.PNG" />
+
+### Sample 2
+
+< img src = "https://github.com/kawalpreettkaur/HNG-sha256/blob/main/Sample%20CLI%20Executions/sample_run2.PNG"/>
+
 # How to use this script?
 
 ### TODO 1 : Save main.py file where your NFT Namings file(CSV file) is present
