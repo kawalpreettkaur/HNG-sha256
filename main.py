@@ -7,7 +7,8 @@ from pathlib import Path
 
 FNAME = []
 C = 0
-NEW =[]
+NEW = []
+FLAG = 0
 
 
 def main():
@@ -16,28 +17,33 @@ def main():
     except IndexError:
         print("Wrong command input!")
         exit(1)
-    
-    # Proceeds to default json generation
-    defaultJson(fname)
 
+    try:
+        with open(fname, 'r') as file:
+            pass
+
+    except:
+
+        print(f"\nError! {fname} doesn't exist or incorrect file path added.")
+        exit(1)
+
+    defaultJson(fname)
 
 
 # TODO 1 : Input CSV file
 # TODO 2 : Generate a JSON file per entry in team's sheet in CHIP-0007's default format
 
 def defaultJson(f):
-    global C
+    global C, FLAG
 
     with open(f, 'r') as file:
         try:
-            os.makedirs("Json_Files", exist_ok = True)
+            os.makedirs("Json_Files", exist_ok=True)
         except OSError as error:
             print("New Directory can not be created. Already exists!")
             exit(0)
-        
+
         print("\nCreating json files...")
-        
-        # gets the filename would help in output file name generation
         FNAME.append(Path(f).stem)
 
         csvreader = csv.reader(file)
@@ -45,23 +51,38 @@ def defaultJson(f):
         for row in csvreader:
             temp = row
 
+            if FLAG == 0 and row != ['Series Number', 'Filename', 'Description', 'Gender']:
+                print("Incorrect File Header!")
+                print("Header Usage Guide: ['Series Number','Filename','Description','Gender']")
+                print(f"Your header usage: {row}")
+                exit(0)
+
+            if len(row) > 4:
+                print("Incorrect row size in your csv file.\n Total 4 columns in a row are allowed.")
+                print(
+                    "Column Usage Guide: Fill each column in a row corresponding to 'Series Number','Filename',"
+                    "'Description','Gender'")
+                exit(0)
+
             if row[0] == 'Series Number':
+                FLAG = 1
                 temp.append("sha256")
                 NEW.append(temp)
                 continue
             elif row[0].strip() == '':
-                
-                # when row is empty
-                
-                print(f"\n= {C} json file(s) created.\nCheck them all in your Current working directory, folder named - Json Files")
-                print(f"\n- sha256 added to the copy of a csv file. Check the file in your current working directory.")
+                print(
+                    f"\n= {C} json file(s) created.\nCheck them all in your Current working directory, folder named - "
+                    f"Json Files")
+                print("\nAdding sha256 of each json file in a new CSV file...")
+                print(
+                    f"\n- sha256 added to the copy of a csv file.   \nCheck the filenamed {FNAME[0]}.output.csv in "
+                    f"your current working directory.")
                 outputFile(NEW)
                 exit(1)
 
             else:
 
                 # TODO 2 : Generate a JSON file per entry in team's sheet in CHIP-0007's default format
-                
                 new_jsonFile = f"{row[1]}.json"
                 json_data = {}
 
@@ -82,7 +103,6 @@ def defaultJson(f):
                 json_data["collection"] = collection_data
 
                 filepath = f"Json_Files/{new_jsonFile}"
-                
                 with open(filepath, 'w') as f:
                     json.dump(json_data, f, indent=2)
                     C += 1
@@ -94,18 +114,15 @@ def defaultJson(f):
 
 # TODO 3 : Calculate sha256 of the each entry
 def sha256_gen(fn):
-    
     return hashlib.sha256(open(fn, 'rb').read()).hexdigest()
 
 
-# TODO 4 : Append it to csv file including new column named sha256
+# TODO 4 : Append it to csv file including new row named sha256
 
 def outputFile(t_list):
-    output = f"{FNAME[0]}output.csv"
+    output = f"{FNAME[0]}.output.csv"
 
     with open(output, 'a') as outputfile:
-            
-
         writer = csv.writer(outputfile)
         for lis in NEW:
             writer.writerow(lis)
