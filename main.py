@@ -84,6 +84,11 @@ def outputFile(hash):
                 if row[0] == 'Series Number':
                     writer.writerow(row+['sha256'])
                 else:
+                    if row[0] == '':
+                        print(f"\n= {C} json file(s) created.\nCheck them all in your Current working directory, folder named - Json Files")
+                        print(f"\n- sha256 added to the copy of a csv file. Check the file in your current working directory.")
+
+                        exit()
                     writer.writerow(row+[hash])
 
 
