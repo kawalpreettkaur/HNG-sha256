@@ -34,18 +34,8 @@
 
 ### TODO 1 : Input CSV file
 ### TODO 2 : Generate a JSON file per entry in team's sheet in CHIP-0007's default format
-### TODO 3 : Calculate sha256 of the each entry
-### TODO 4 : Append it to csv file including new row named sha256
 
-# Resources:
-
-### 1. https://github.com/Chia-Network/chips/blob/main/CHIPs/chip-0007.md
-### 2. https://github.com/Chia-Network/chips/blob/main/assets/chip-0007/example.json
-
-### Below mentioned default format of json file has been used:
-
-'''
-DEFAULT DATA FORMAT
+### Below mentioned default CHIP-0007 format of json file has been used:
 
 json_data =
 {
@@ -66,5 +56,12 @@ json_data =
     }
 }
 
+### TODO 3 : Calculate sha256 of the each entry
+### TODO 4 : Append it to csv file including new row named sha256
 
-'''
+# Resources:
+
+### 1. https://github.com/Chia-Network/chips/blob/main/CHIPs/chip-0007.md
+### 2. https://github.com/Chia-Network/chips/blob/main/assets/chip-0007/example.json
+
+
