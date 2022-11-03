@@ -31,6 +31,9 @@ json_data =
 3. ### Calculate sha256 of the each entry
 4. ### Append it to csv file including new row named sha256
 
+#
+#
+
 ## Getting started
 
 ## Prerequisite : 
