@@ -1,12 +1,12 @@
 # HNG-sha256 
 ## Generates sha256 of json files
 
-## Algorithm that has been used to implement sha256 generator:
+### Algorithm that has been used to implement sha256 generator:
 
 1. ###  Input CSV file
 2. ###  Generate a JSON file per entry in team's sheet in CHIP-0007's default format
 
-### Below mentioned default CHIP-0007 format of json file has been used:
+#### Below mentioned default CHIP-0007 format of json file has been used:
 ```sh
 json_data =
 {
@@ -33,11 +33,11 @@ json_data =
 
 ## Getting started
 
-# Prerequisite : 
+## Prerequisite : 
 1. Python Enviornment
 2. CLI
 
-# Sample Code Executions
+## Sample Code Executions
 
 ### Sample 1
 
@@ -48,7 +48,7 @@ json_data =
 ![image](https://raw.githubusercontent.com/kawalpreettkaur/HNG-sha256/main/Sample%20CLI%20Executions/sample_run2.PNG)
 
 
-# Common Sample Errors while runnning a Script
+## Common Sample Errors while runnning a Script
 
 ### Sample Error 1 : Incorrect Row size in a csv file
 
@@ -85,7 +85,7 @@ json_data =
 
 
 
-## Resources:
+### Resources:
 
 ### 1. https://github.com/Chia-Network/chips/blob/main/CHIPs/chip-0007.md
 ### 2. https://github.com/Chia-Network/chips/blob/main/assets/chip-0007/example.json
