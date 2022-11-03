@@ -22,7 +22,7 @@ def defaultJson(f):
     
     try:
         os.makedirs("Json Files", exist_ok = True)
-     except OSError as error:
+    except OSError as error:
         print("New Directory '%s' can not be created. Already exists!")
         exit(0)
 
@@ -33,6 +33,7 @@ def defaultJson(f):
         csvreader = csv.reader(file)
 
         for row in csvreader:
+            temp = row
 
             if row[0] == 'Series Number' or row[0] == '':
                 continue
@@ -63,8 +64,8 @@ def defaultJson(f):
                     json.dump(json_data, f, indent=2)
                     C += 1
                     sha256_hash = sha256_gen(filepath)
-                    # HASHES.append(sha256_hash)
-                    outputFile(sha256_hash)
+                    temp.append(sha256_hash)
+                    outputFile(temp)
 
         print(f"\n= {C} json file(s) created.\nCheck them all in your Current working directory, folder named - Json Files")
         print(f"\n- sha256 added to the copy of a csv file. Check the file in your current working directory.")
@@ -77,31 +78,12 @@ def sha256_gen(filename):
 
 # TODO 4 : Append it to csv file including new row named sha256
 
-def outputFile(hash):
+def outputFile(t_list):
     output = f"{FNAME[0]}.output.csv"
-    fname = sys.argv[1]
-    with open(fname, 'r') as inputfile:
-        # with open("file_sh256/NFT Namings.csv", 'r') as inputfile:
-        with open(output, 'w') as outputfile:
-            writer = csv.writer(outputfile)
-            reader = csv.reader(inputfile)
 
-            for row in reader:
-                if row[0] == 'Series Number':
-                    writer.writerow(row+['sha256'])
-            
-                 writer.writerow(row+[hash])
-
+    with open(output, 'a') as outputfile:
+           writer = csv.writer(outputfile)
+           writer.writerow(t_list)
 
 if __name__ == main():
     main()
-
-
-'''
-Resources:
-
-1. https://github.com/Chia-Network/chips/blob/main/CHIPs/chip-0007.md
-2. https://github.com/Chia-Network/chips/blob/main/assets/chip-0007/example.json
-
-
-'''
