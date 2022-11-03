@@ -1,13 +1,14 @@
-# HNG-sha256
-Generates sha256 of json files
+# HNG-sha256 
+## Generates sha256 of json files
+
 
 # Prerequisite : 
 1. Python Enviornment
 2. CLI
 
--> TODO 1 : Save this file where your NFT Namings file(CSV file) is present
--> TODO 2 : Open Command Prompt and change your present directory ( where TODO 1 is present)
--> TODO 3 : Before running the script please ensure you follow these guidelines:-
+### TODO 1 : Save this file where your NFT Namings file(CSV file) is present
+### TODO 2 : Open Command Prompt and change your present directory ( where TODO 1 is present)
+### TODO 3 : Before running the script please ensure you follow these guidelines:-
 # Make sure to include "csv file only" while running the script.
 # CSV file must include Headers in this order : Series Number,Filename,Description,Gender
 # Make sure your NFT file name doesn't include any spaces.
