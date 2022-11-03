@@ -11,10 +11,10 @@
 ### TODO 1 : Save main.py file where your NFT Namings file(CSV file) is present
 ### TODO 2 : Open Command Prompt and change your present directory ( where TODO 1 is present)
 ### TODO 3 : Before running the script please ensure you follow these guidelines:-
-####           - Make sure to include "csv file only" while running the script.
+####           - Make sure including "csv file only" while running the script.
 ####           - CSV file must include Headers in this order : Series Number,Filename,Description,Gender
-####           - Make sure your NFT file name doesn't include any spaces.
-####           - If there is space please replace it with an underscore.
+####           - Make sure your NFT file name doesn't include any spaces. If there is space, please replace it with an underscore.
+#### 
 ### TODO 4 : Run this -> python main.py NFT_Namings.csv
 ### TODO 5 : Viola, CSV file including sha256 has been created!
 
