@@ -59,7 +59,7 @@ json_data =
 ### TODO 3 : Calculate sha256 of the each entry
 ### TODO 4 : Append it to csv file including new row named sha256
 
-# Resources:
+## Resources:
 
 ### 1. https://github.com/Chia-Network/chips/blob/main/CHIPs/chip-0007.md
 ### 2. https://github.com/Chia-Network/chips/blob/main/assets/chip-0007/example.json
