@@ -1,0 +1,15 @@
+{
+  "format": "CHIP-0007",
+  "name": "gbeminyi-the-monk",
+  "description": "He lives in a monastery off the coast. No one has heard him speak in years.",
+  "attributes": [
+    {
+      "trait_type": "Gender",
+      "value": "male"
+    }
+  ],
+  "collection": {
+    "name": "gbeminyi-the-monk Collection",
+    "id": "11"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "format": "CHIP-0007",
+  "name": "sesan-the-smartie",
+  "description": "Sesan always comes first in competitions.",
+  "attributes": [
+    {
+      "trait_type": "Gender",
+      "value": "male"
+    }
+  ],
+  "collection": {
+    "name": "sesan-the-smartie Collection",
+    "id": "17"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "format": "CHIP-0007",
+  "name": "chibuike-the-kudibag",
+  "description": "Chibuike is too rich. Everyone wonders how he got it.",
+  "attributes": [
+    {
+      "trait_type": "Gender",
+      "value": "male"
+    }
+  ],
+  "collection": {
+    "name": "chibuike-the-kudibag Collection",
+    "id": "5"
+  }
+}

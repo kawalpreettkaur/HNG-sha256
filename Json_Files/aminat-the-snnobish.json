@@ -1,0 +1,15 @@
+{
+  "format": "CHIP-0007",
+  "name": "aminat-the-snnobish",
+  "description": "Aminat never really wants to talk to anyone.",
+  "attributes": [
+    {
+      "trait_type": "Gender",
+      "value": "female"
+    }
+  ],
+  "collection": {
+    "name": "aminat-the-snnobish Collection",
+    "id": "3"
+  }
+}
