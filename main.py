@@ -105,11 +105,11 @@ def defaultJson(f):
                 filepath = f"Json_Files/{new_jsonFile}"
                 with open(filepath, 'w') as f:
                     json.dump(json_data, f, indent=2)
-                    C += 1
-                    sha256_hash = sha256_gen(filepath)
-                    temp.append(sha256_hash)
+                C += 1
+                sha256_hash = sha256_gen(filepath)
+                temp.append(sha256_hash)
 
-                    NEW.append(temp)
+                NEW.append(temp)
 
 
 # TODO 3 : Calculate sha256 of the each entry
