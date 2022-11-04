@@ -1,39 +1,6 @@
 # HNG-sha256 
 ## Generates sha256 of json files
 
-### Algorithm that has been used to implement sha256 generator:
-
-1. ###  Input CSV file
-2. ###  Generate a JSON file per entry in team's sheet in CHIP-0007's default format
-
-#### Below mentioned default CHIP-0007 format of json file has been used:
-```sh
-json_data =
-{
-    "format": "CHIP-0007",
-    "name" : "NFT name",
-    "description": "Description of the NFT",
-    "attributes": 
-    [
-        {
-            "trait_type": "Gender",
-            "value": "Value of the NFT attribute"
-        }
-    ],
-    "collection": 
-    {
-        "name": "Name of the NFT collection - NFT NAme + Collection",
-        "id": "ID of the NFT collection - e43fcfe6-1d5c-4d6e-82da-5de3aa8b3b57"
-    }
-}
-```
-
-3. ### Calculate sha256 of the each entry
-4. ### Append it to csv file including new row named sha256
-
-#
-#
-
 ## Getting started
 
 ## Prerequisite : 
@@ -88,9 +55,41 @@ json_data =
 
 
 
-### Resources:
+### References:
 
 ### 1. https://github.com/Chia-Network/chips/blob/main/CHIPs/chip-0007.md
 ### 2. https://github.com/Chia-Network/chips/blob/main/assets/chip-0007/example.json
+
+### Algorithm :
+
+1. ###  Gets CSV file file from a user
+2. ###  Generates JSON file per entry in team's sheet in CHIP-0007's default format
+
+#### Below mentioned default CHIP-0007 format of json file has been used:
+```sh
+json_data =
+{
+    "format": "CHIP-0007",
+    "name" : "NFT name",
+    "description": "Description of the NFT",
+    "attributes": 
+    [
+        {
+            "trait_type": "Gender",
+            "value": "Value of the NFT attribute"
+        }
+    ],
+    "collection": 
+    {
+        "name": "Name of the NFT collection - NFT NAme + Collection",
+        "id": "ID of the NFT collection - e43fcfe6-1d5c-4d6e-82da-5de3aa8b3b57"
+    }
+}
+```
+
+3. ### Calculates sha256 hash of the each entry
+4. ### Appends it to the csv file underneath new header named sha256
+
+
 
 
