@@ -51,7 +51,7 @@
                 Rename and replace the space with an underscore. Now, it becomes NFT_NAMINGS.csv
   - - -              
 
-4. Run below code in command prompt
+4. Run below command in command prompt
 ```sh 
 python main.py NFT_Namings.csv
 ```
