@@ -40,30 +40,23 @@
 
 # How to use this script to avoid common errors?
 
-1. ###  Save main.py file where your NFT Namings file(CSV file) is present
-2. ###  Open Command Prompt and change your present directory ( where TODO 1 is present)
-3. ###  Before running the script please ensure you follow these guidelines:-
-####           - Make sure including "csv file only" while running the script.
-####           - CSV file must include Headers in this order : Series Number,Filename,Description,Gender
-####           - Make sure your NFT file name doesn't include any spaces. If there is space, please replace it with an underscore. 
-####                Example: NFT Namings.csv is incorrect.
-####                         Rename and replace the space with an underscore. Now, it becomes NFT_NAMINGS.csv
-#### 
-4. ### Run this -> python main.py NFT_Namings.csv
-5. ### Viola, CSV file including sha256 has been created!
+1. Save main.py file where your NFT Namings file(CSV file) is present
+2. Open Command Prompt and change your present directory ( where TODO 1 is present)
+3. Before running the script please ensure you follow these guidelines:-
+           - Make sure including "csv file only" while running the script.
+           - CSV file must include Headers in this order : Series Number,Filename,Description,Gender
+          - Make sure your NFT file name doesn't include any spaces. If there is space, please replace it with an underscore. 
+                Example: NFT Namings.csv is incorrect.
+                Rename and replace the space with an underscore. Now, it becomes NFT_NAMINGS.csv
 
+4. Run this -> python main.py NFT_Namings.csv
+5. Viola, CSV file including sha256 has been created!
 
-
-
-### References:
-
-### 1. https://github.com/Chia-Network/chips/blob/main/CHIPs/chip-0007.md
-### 2. https://github.com/Chia-Network/chips/blob/main/assets/chip-0007/example.json
 
 ### Algorithm :
 
-1. ###  Gets CSV file file from a user
-2. ###  Generates JSON file per entry in team's sheet in CHIP-0007's default format
+1.   Gets CSV file file from a user
+2.   Generates JSON file per entry in team's sheet in CHIP-0007's default format
 
 #### Below mentioned default CHIP-0007 format of json file has been used:
 ```sh
@@ -87,9 +80,12 @@ json_data =
 }
 ```
 
-3. ### Calculates sha256 hash of the each entry
-4. ### Appends it to the csv file underneath new header named sha256
+3.  Calculates sha256 hash of the each entry
+4.  Appends it to the csv file underneath new header named sha256
 
 
 
+### References:
 
+### 1. https://github.com/Chia-Network/chips/blob/main/CHIPs/chip-0007.md
+### 2. https://github.com/Chia-Network/chips/blob/main/assets/chip-0007/example.json
