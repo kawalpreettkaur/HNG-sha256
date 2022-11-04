@@ -49,8 +49,11 @@
                 Example: NFT Namings.csv is incorrect.
                 Rename and replace the space with an underscore. Now, it becomes NFT_NAMINGS.csv
 
-4. Run this -> python main.py NFT_Namings.csv
-5. Viola, CSV file including sha256 has been created!
+4. Run below code in command prompt
+```sh 
+python main.py NFT_Namings.csv
+```
+6. Viola, CSV file including sha256 has been created!
 
 
 ### Algorithm :
