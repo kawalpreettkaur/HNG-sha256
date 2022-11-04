@@ -1,0 +1,15 @@
+{
+  "format": "CHIP-0007",
+  "name": "chidinma-the-model",
+  "description": "From Paris' runways, to London's streets, she's always in demand.",
+  "attributes": [
+    {
+      "trait_type": "Gender",
+      "value": "female"
+    }
+  ],
+  "collection": {
+    "name": "chidinma-the-model Collection",
+    "id": "6"
+  }
+}

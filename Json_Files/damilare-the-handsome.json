@@ -1,0 +1,15 @@
+{
+  "format": "CHIP-0007",
+  "name": "damilare-the-handsome",
+  "description": "He's a fine boy. Everyone loves his face(and him).",
+  "attributes": [
+    {
+      "trait_type": "Gender",
+      "value": "male"
+    }
+  ],
+  "collection": {
+    "name": "damilare-the-handsome Collection",
+    "id": "8"
+  }
+}

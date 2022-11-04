@@ -1,0 +1,15 @@
+{
+  "format": "CHIP-0007",
+  "name": "adewale-the-amebo",
+  "description": "Adewale always wants to be in everyone's business.",
+  "attributes": [
+    {
+      "trait_type": "Gender",
+      "value": "male"
+    }
+  ],
+  "collection": {
+    "name": "adewale-the-amebo Collection",
+    "id": "1"
+  }
+}

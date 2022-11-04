@@ -1,0 +1,15 @@
+{
+  "format": "CHIP-0007",
+  "name": "henry-the-sportsman",
+  "description": "He's played every sport known to man. Even cricket.",
+  "attributes": [
+    {
+      "trait_type": "Gender",
+      "value": "male"
+    }
+  ],
+  "collection": {
+    "name": "henry-the-sportsman Collection",
+    "id": "12"
+  }
+}
