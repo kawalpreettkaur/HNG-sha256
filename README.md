@@ -7,6 +7,7 @@
 1. Python Enviornment
 2. CLI
 
+  
 ## Sample Code Executions
 
 ### Sample 1
@@ -17,7 +18,7 @@
 
 ![image](https://raw.githubusercontent.com/kawalpreettkaur/HNG-sha256/main/Sample%20CLI%20Executions/sample_run2.PNG)
 
-
+  - - -  
 ## Common Sample Errors while runnning a Script
 
 ### Sample Error 1 : Incorrect Row size in a csv file
