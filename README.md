@@ -1,5 +1,7 @@
-# HNG-sha256 
-## Generates sha256 of json files
+# HNG-sha256 - Generates sha256 of json files
+
+###Description
+Generates CHIP-007 NFT compatible JSON and csv file including SHA256 of compatible json file.
 
 ## Getting started
 
